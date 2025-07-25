@@ -5,8 +5,11 @@ A comprehensive AI-orchestrated development workflow system based on analysis of
 ## Quick Start
 
 1. **Start New Project**: `./scripts/start-workflow.sh`
-2. **Continue Existing**: `./scripts/continue-workflow.sh <project-id>`
-3. **Template Overview**: See `templates/` directory
+2. **Run Phase Scripts**: `./scripts/[phase]-phase.sh`
+3. **Use Prompts**: See `prompts/` directory for versioned Claude Code prompts
+4. **Track Progress**: `./scripts/status.sh` (partially working)
+
+**Note**: This is v1.0.0 - we're actively improving based on real usage. See ROADMAP.md for planned enhancements.
 
 ## Key Features
 

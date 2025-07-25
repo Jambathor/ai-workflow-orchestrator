@@ -4,6 +4,8 @@
 ## Project: Portfolio OSS Showcase (First Test)
 
 ## 📝 Update Log
+- **2024-07-25 19:30** - Blueprint phase completed successfully
+- **2024-07-25 19:15** - Added human-in-the-loop requirement to roadmap
 - **2024-07-25 19:00** - Added missing phase scripts (blueprint-phase.sh)
 - **2024-07-25 18:30** - Successfully completed concept phase with proper boundaries
 - **2024-07-25 18:00** - Created phase-specific instructions to prevent scope creep
@@ -234,6 +236,31 @@ The framework's value comes from its structured approach, but without strong gua
 3. **Deliverable checklists** keep focus
 4. **Phase validation** before transitions
 5. **Git checkpoints** at phase boundaries
+
+## 🤝 Human-in-the-Loop Requirements
+
+### 9. Need for More Human Interaction
+**Observation**: User wants more interactive workflow, not fully automated AI execution.
+
+**Current Issue**:
+- AI agents complete entire phases autonomously
+- Limited checkpoints for human input
+- User feels disconnected from the process
+
+**Proposed Solutions**:
+- Add approval gates between major sections
+- Create interactive review points
+- Allow human to guide AI decisions
+- Implement "pause for review" functionality
+- Add more granular control over agent actions
+
+### 10. Workflow Interactivity Improvements
+**Recommendations**:
+- Phase sections should have human approval before proceeding
+- AI should present options and let human choose
+- Regular progress updates with decision points
+- Ability to modify/redirect AI work mid-phase
+- Human-guided exploration rather than autonomous execution
 
 ---
 

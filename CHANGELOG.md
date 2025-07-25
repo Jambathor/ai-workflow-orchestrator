@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Phase-specific instruction templates (CONCEPT_PHASE_INSTRUCTIONS.md, BLUEPRINT_PHASE_INSTRUCTIONS.md)
 - Learnings documentation from real-world testing (`learnings/` directory)
 - CHANGELOG.md for tracking framework evolution
+- Versioned prompts directory for Claude Code prompts
+- ROADMAP.md with development priorities
+- Phase workflow guide acknowledging current limitations
+- Human-in-the-loop requirements to roadmap
 
 ### Changed
 - Improved phase boundary enforcement with explicit DO/DO NOT instructions

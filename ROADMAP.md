@@ -19,6 +19,14 @@ Create a robust, AI-powered development workflow framework that consistently del
 - [ ] Implement automatic artifact tracking
 - [ ] Add phase completion scripts
 
+### 2. Human-in-the-Loop Features (NEW - High Priority)
+- [ ] Add approval gates within phases
+- [ ] Create interactive decision points
+- [ ] Implement "pause for review" functionality
+- [ ] Add section-by-section progression
+- [ ] Enable mid-phase modifications
+- [ ] Create interactive prompts for choices
+
 ### 2. Strengthen Phase Boundaries
 - [ ] Add phase guards to all templates
 - [ ] Create phase-specific agent constraints

@@ -9,18 +9,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Blueprint phase script (`scripts/blueprint-phase.sh`) for standardized phase transitions
-- Phase-specific instruction templates (CONCEPT_PHASE_INSTRUCTIONS.md, BLUEPRINT_PHASE_INSTRUCTIONS.md)
+- PRD phase script (`scripts/prd-phase.sh`) with interactive human-in-the-loop workflow
+- Phase-specific instruction templates (CONCEPT_PHASE_INSTRUCTIONS.md, BLUEPRINT_PHASE_INSTRUCTIONS.md, PRD_PHASE_INTERACTIVE_INSTRUCTIONS.md)
 - Learnings documentation from real-world testing (`learnings/` directory)
 - CHANGELOG.md for tracking framework evolution
 - Versioned prompts directory for Claude Code prompts
 - ROADMAP.md with development priorities
 - Phase workflow guide acknowledging current limitations
 - Human-in-the-loop requirements to roadmap
+- Interactive decision points with approval gates
+- Decision logging for tracking human choices
 
 ### Changed
 - Improved phase boundary enforcement with explicit DO/DO NOT instructions
 - Enhanced project.json structure to track phase artifacts
 - Updated status script to better reflect actual progress
+- PRD phase now interactive with section-by-section approvals
+- Workflow shifted from AI-autonomous to human-guided approach
 
 ### Fixed
 - Phase bleeding issue where AI would skip ahead to implementation

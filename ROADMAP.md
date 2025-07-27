@@ -11,10 +11,30 @@ Create a robust, AI-powered development workflow framework that consistently del
 - ⚠️ Weak phase boundaries
 - ⚠️ Manual prompt management
 
+## Critical Fixes (v1.0.1) - URGENT
+
+### 1. Decision Logging Automation
+- [ ] Update ALL phase instructions with explicit logging code
+- [ ] Add decision templates with actual code examples
+- [ ] Create decision logging validation
+- [ ] Test with real projects
+
+### 2. Phase Completion Automation
+- [ ] Update ALL phase instructions to update project.json
+- [ ] Add explicit Python code for status updates
+- [ ] Include artifact listing in completion
+- [ ] Add reminder to use complete-phase.py script
+
+### 3. Meta-Task Instructions
+- [ ] Create explicit "bookkeeping" sections in all phases
+- [ ] Add code snippets for all configuration updates
+- [ ] Validate that updates actually happen
+- [ ] Consider creating MCP tools for these tasks
+
 ## Short-term Goals (v1.1.0) - Next 2 weeks
 
 ### 1. Complete Phase Scripts
-- [ ] Create remaining phase scripts (prd, architecture, testing, implementation)
+- [x] Create remaining phase scripts (prd, architecture, testing, implementation)
 - [ ] Add phase validation logic to all scripts
 - [ ] Implement automatic artifact tracking
 - [ ] Add phase completion scripts

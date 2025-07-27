@@ -534,6 +534,96 @@ def complete_phase(phase_name, artifacts):
 - Users shouldn't need to manually update JSON
 - Defeats purpose of automation framework
 
+## 🏗️ Architecture Phase Testing
+
+### 26. Architecture Phase Execution Analysis
+**Result**: Mixed success - interactive flow worked but critical gaps remain.
+
+**What Worked Well**:
+1. ✅ Interactive decision-making - Human chose all technologies
+2. ✅ Clear trade-off presentations for each choice
+3. ✅ Good todo tracking throughout the phase
+4. ✅ High-quality documentation produced (2,717 lines)
+5. ✅ All 9 expected documents created
+
+**What Failed**:
+1. ❌ **Decision logging completely ignored** - architecture-decisions.md never updated
+2. ❌ **Phase completion not automatic** - No project.json update mentioned
+3. ❌ **No ADR records created** despite choosing options
+
+### 27. Decision Tracking Failure (Again)
+
+**Critical Issue**: The `architecture-decisions.md` file shows:
+- Created with template only
+- ADR-001 still shows "TBD" for everything
+- No decisions were logged despite 5 major choices:
+  1. Frontend: Next.js 14
+  2. Backend: Hybrid approach
+  3. Database: PostgreSQL + Next.js Cache
+  4. Auth: Custom JWT with security libraries
+  5. Deployment: Vercel + Neon + Cloudflare
+
+**Expected ADRs**:
+```markdown
+### ADR-001: Frontend Framework Selection
+- **Status**: Accepted
+- **Context**: Need full-stack capabilities with security
+- **Decision**: Next.js 14 with App Router
+- **Alternatives**: Vite+React, Astro
+- **Consequences**: Tied to Vercel ecosystem, larger bundle
+- **Timestamp**: 2025-07-27T23:10:00Z
+```
+
+This pattern should have been repeated for EACH decision.
+
+### 28. Phase Completion Issue (Repeated)
+
+**Same Problem as PRD Phase**:
+- AI showed "Architecture Phase Complete! 🎉"
+- But didn't mention updating project.json
+- User will need to manually mark complete AGAIN
+- No learning from previous phase issue
+
+### 29. What the AI Should Have Done
+
+At the end when showing "Architecture Phase Complete!":
+
+1. **Update project.json**:
+   ```python
+   # Mark architecture phase complete
+   # Add all 9 documents to artifacts
+   # Set completion timestamp
+   ```
+
+2. **Mention the manual step**:
+   ```
+   To mark this phase complete, run:
+   ~/path/to/complete-phase.py architecture
+   ```
+
+3. **Update decision log** with all 5 choices made
+
+### 30. Positive Aspects
+
+Despite the logging issues:
+- **Interactive flow validated** - Human had full control
+- **Quality output** - All documents are comprehensive
+- **Good UX** - Clear options, waited for responses
+- **Followed constraints** - Remembered $0/month, open source requirements
+
+### 31. Framework Improvements Urgently Needed
+
+**Must Fix**:
+1. Make decision logging AUTOMATIC during the flow
+2. Add phase completion as final step
+3. Create reminders in the AI instructions
+4. Consider making these tool calls vs manual updates
+
+**Pattern Emerging**:
+- AI focuses on content creation
+- Ignores meta-tasks (logging, status updates)
+- Needs explicit "bookkeeping" instructions
+
 ---
 
 *This document should be used to improve the AI Workflow Orchestrator framework based on real-world testing.*

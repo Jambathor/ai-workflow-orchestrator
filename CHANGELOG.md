@@ -10,7 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Blueprint phase script (`scripts/blueprint-phase.sh`) for standardized phase transitions
 - PRD phase script (`scripts/prd-phase.sh`) with interactive human-in-the-loop workflow
-- Phase-specific instruction templates (CONCEPT_PHASE_INSTRUCTIONS.md, BLUEPRINT_PHASE_INSTRUCTIONS.md, PRD_PHASE_INTERACTIVE_INSTRUCTIONS.md)
+- Architecture phase script (`scripts/architecture-phase.sh`) with technical decision checkpoints
+- Testing phase script (`scripts/testing-phase.sh`) for automated test strategy generation
+- Phase-specific instruction templates (CONCEPT_PHASE_INSTRUCTIONS.md, BLUEPRINT_PHASE_INSTRUCTIONS.md, PRD_PHASE_INTERACTIVE_INSTRUCTIONS.md, ARCHITECTURE_PHASE_INTERACTIVE_INSTRUCTIONS.md)
 - Learnings documentation from real-world testing (`learnings/` directory)
 - CHANGELOG.md for tracking framework evolution
 - Versioned prompts directory for Claude Code prompts
@@ -19,6 +21,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Human-in-the-loop requirements to roadmap
 - Interactive decision points with approval gates
 - Decision logging for tracking human choices
+- Complete-phase.py helper script for phase completion
+- Critical framework gaps documentation
+- Concept clarification questions template
 
 ### Changed
 - Improved phase boundary enforcement with explicit DO/DO NOT instructions
@@ -56,8 +61,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 5. **Testing Phase** - Quality assurance strategy
 6. **Implementation Phase** - AI-assisted development
 
+### Discovered Issues (Critical)
+- Decision logging not happening despite instructions
+- Phase completion requires manual project.json updates
+- AI ignores "meta-tasks" (configuration updates, logging)
+- Every phase transition blocked without manual intervention
+
 ### Known Issues
-- Only concept-phase.sh script included
+- Only concept-phase.sh script included (partially resolved)
 - Phase boundaries not strongly enforced
 - Setup script has input handling issues
 - No automated phase transition scripts

@@ -465,6 +465,75 @@ The human-in-the-loop approach proved its value by:
 
 The only significant gap was decision logging, which is a process issue, not a fundamental flaw. The interactive approach is validated and ready for use in other phases.
 
+## 🚨 Phase Completion Issue
+
+### 23. PRD Phase Status Not Updated Automatically
+**Problem**: After user typed "finalize" to complete PRD phase, the project.json was NOT updated.
+
+**What Happened**:
+1. User typed "finalize" at the end of PRD phase
+2. AI created phase-completion.md and committed changes
+3. AI showed "✅ PRD Phase Complete!" message
+4. BUT: project.json still showed `"status": "in_progress"`
+5. This blocked starting the Architecture phase
+6. Required manual intervention with Python script
+
+**Expected Behavior**:
+- When user types "finalize", the AI should:
+  - Update project.json with status: "completed"
+  - Add completion timestamp
+  - List all artifacts created
+  - THEN show completion message
+
+**Root Cause**:
+- AI focused on creating deliverables
+- No code to update project.json status
+- Phase scripts check status, but AI doesn't update it
+
+### 24. Framework Fix Needed
+
+**Update PRD Instructions** to include:
+```markdown
+### Step 10: Phase Finalization
+
+When human types 'finalize':
+1. Create phase-completion.md
+2. UPDATE project.json:
+   - Set prd.status = "completed"
+   - Set prd.completed = current timestamp
+   - Add all artifacts to prd.artifacts array
+3. Commit all changes
+4. Show completion message
+```
+
+**Add to All Phase Scripts**:
+- Reminder that AI must update project.json
+- Validation that status was updated
+- Clear error if phase wasn't properly completed
+
+**Create Phase Completion Helper**:
+```python
+# phases/scripts/complete-phase.py
+def complete_phase(phase_name, artifacts):
+    """Helper to properly complete a phase"""
+    # Update project.json
+    # Set status, timestamp, artifacts
+    # Save and commit
+```
+
+### 25. Impact of This Issue
+
+**Workflow Disruption**:
+- User couldn't proceed to next phase
+- Required debugging to find the issue
+- Manual fix needed (Python script)
+- Breaks the "seamless workflow" promise
+
+**This is a Critical Gap** because:
+- Every phase transition will hit this issue
+- Users shouldn't need to manually update JSON
+- Defeats purpose of automation framework
+
 ---
 
 *This document should be used to improve the AI Workflow Orchestrator framework based on real-world testing.*
